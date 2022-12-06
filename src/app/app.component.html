@@ -1,47 +1,62 @@
-<header class="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4">
-  
-  <!-- Logo text or image -->
-  <div class="flex items-center justify-between mb-4 md:mb-0">
-    <h1 class="leading-none text-2xl text-grey-darkest">
-      <a class="no-underline text-grey-darkest hover:text-black" href="#">
-        Site Title
-      </a>
-    </h1>
+<app-header></app-header>
+<app-carousel></app-carousel>
 
-    <a class="text-black hover:text-orange md:hidden" href="#">
-      <i class="fa fa-2x fa-bars"></i>
-    </a>
-  </div>
-  <!-- END Logo text or image -->
-  
-  <!-- Search field -->
-  <form class="mb-4 w-full md:mb-0 md:w-1/4">
-    <label class="hidden" for="search-form">Search</label>
-    <input class="bg-grey-lightest border-2 focus:border-orange p-2 rounded-lg shadow-inner w-full" placeholder="Search" type="text">
-    <button class="hidden">Submit</button>
-  </form>
-  <!-- END Search field -->
-  
-  <!-- Global navigation -->
-  <nav>
-    <ul class="list-reset md:flex md:items-center">
-      <li class="md:ml-4">
-        <a class="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-          Products
-        </a>
-      </li>
-      <li class="md:ml-4">
-        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-          About
-        </a>
-      </li>
-      <li class="md:ml-4">
-        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- END Global navigation -->
+<div class="app-rules">
+    <h3 class="app-heading">One App To Rule Them All</h3>
+    <div class="setting">
+        <div class="setting-box">
+            <div class="setting-icon">1</div>
+            <div class="setting-title">To-Do List</div>
+        </div>
+        <div class="setting-box">
+            <div class="setting-icon">2</div>
+            <div class="setting-title">Habit Tracker</div>
+        </div>
+        <div class="setting-box">
+            <div class="setting-icon">3</div>
+            <div class="setting-title">Journaling</div>
+        </div>
+        <div class="setting-box">
+            <div class="setting-icon">4</div>
+            <div class="setting-title">Notes</div>
+        </div>
+        <div class="setting-box">
+            <div class="setting-icon">5</div>
+            <div class="setting-title">Lists</div>
+        </div>
+       
 
-</header>
+    </div>
+
+
+</div>
+
+<div class="video-section">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
+        <div class="relative mb-6 sm:mx-auto md:mb-10 md:max-w-md lg:max-w-lg">
+            <img class="object-cover w-full h-56 rounded shadow-lg md:h-64 lg:h-80 mt-40"
+                src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                alt="" /><a href="/" aria-label="Play Video"
+                class="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25">
+                <div
+                    class="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
+                    <svg class="w-10 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z">
+                        </path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
+
+            <p class="mb-5 text-base text-gray-700 md:text-lg">
+                Watch Mevolve demo video to understand the application.
+            </p>
+
+        </div>
+    </div>
+</div>
+<app-pricing></app-pricing>
+<app-contact-us></app-contact-us>
+<app-footer></app-footer>
