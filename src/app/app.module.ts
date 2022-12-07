@@ -11,6 +11,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { CarosuelComponent } from './carousel/carousel.component';
 import { DescriptionViewComponent } from './description-view/description-view.component';
 import { MaterialModule } from './material.module';
+import { CustomizeViewComponent } from './customize/customize.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MaterialModule } from './material.module';
     ContactUsComponent,
     PricingComponent,
     CarosuelComponent,
-    DescriptionViewComponent
+    DescriptionViewComponent,
+    CustomizeViewComponent
   ],
   imports: [
     BrowserModule,
