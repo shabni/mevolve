@@ -1,0 +1,33 @@
+<div class="container" [style.flex-direction]="flexDirection">
+    <div class="img-section">
+        
+        <img [src]="imageUrl" style="width: 90%; height:100%" />
+    </div>
+    <div class="description-section">
+        <div class="title">Customize the way you like</div>
+        <div class="feature">
+            <div class="toggle">
+                <mat-slide-toggle></mat-slide-toggle>
+                <span >Trun Off-on features</span>
+            </div>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+        <div class="info">Mevolve was developed to help you reach your goal and be more consistent</div>
+        <div class="mode">
+            <mat-icon>wb_sunny</mat-icon>
+            <div class="mode-desc">
+                <span>Light and Dark Mode</span>
+                <mat-icon>expand_more</mat-icon>
+
+            </div>
+        </div>
+
+        <div class="mode">
+            <mat-icon>palette</mat-icon>
+            <div class="mode-desc">
+                <span>Multi theme color</span>
+                <mat-icon>expand_more</mat-icon>
+            </div>
+        </div>
+    </div>
+</div>

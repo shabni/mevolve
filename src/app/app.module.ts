@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { CarosuelComponent } from './carousel/carousel.component';
+import { DescriptionViewComponent } from './description-view/description-view.component';
+import { MaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { CarosuelComponent } from './carousel/carousel.component';
     FooterComponent,
     ContactUsComponent,
     PricingComponent,
-    CarosuelComponent
+    CarosuelComponent,
+    DescriptionViewComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

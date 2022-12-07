@@ -1,0 +1,63 @@
+.container{
+    height: 420px;
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 300px;
+
+    .img-section {
+        height: 100%; 
+        width: 30%;
+        // background-color: orange;
+    }
+
+    .description-section {
+        height: 100%; 
+        width: 50%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        
+        .title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .feature{
+            font-size: 16px;
+            font-weight: 500;
+            color: #1da1f2;
+            display: flex;
+            justify-content: space-between;
+        }
+        .toggle {
+            width: 200px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .info {
+            margin-left: 50px;
+            color: gray;
+            width: 300px;
+        }
+
+        .mode {
+            display: flex;
+            justify-content: start;
+            gap: 25px;
+            align-items: center;
+
+            .mode-desc {
+                font-weight: 500;
+                display: flex;
+                justify-content: space-between;
+                width: 411px;
+            }
+        }
+    }
+}
