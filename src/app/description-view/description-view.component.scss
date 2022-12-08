@@ -10,6 +10,7 @@
     .img-section {
         height: 100%; 
         width: 28%;
+        min-width: 250px;
     }
 
     .description-section {
@@ -66,6 +67,8 @@
         display: flex !important;
 		flex-direction: column !important;
         height: 780px;
+        align-items: center;
+        padding: 0;
 
         .img-section {
             min-width: 300px;

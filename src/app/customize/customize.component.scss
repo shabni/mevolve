@@ -13,6 +13,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        min-width: 250px;
     }
 
     .description-section {
@@ -52,6 +53,8 @@
 
         display: flex !important;
 		flex-direction: column !important;
+        align-items: center;
+        padding: 0;
 
         .img-section {
             min-width: 300px;
