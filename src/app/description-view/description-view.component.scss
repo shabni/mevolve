@@ -59,3 +59,20 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px){
+	.container {
+
+        display: flex !important;
+		flex-direction: column !important;
+        height: 780px;
+
+        .img-section {
+            min-width: 300px;
+        }
+
+        .description-section {
+            min-width: 300px;
+        }
+	}
+}    
