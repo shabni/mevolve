@@ -7,6 +7,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	
 }
 
 :root {
@@ -24,11 +25,10 @@ body {
 	font-weight: 400;
 	line-height: 1.6;
 	font-size: 1.6rem;
+	
 }
 
 .video-section {
-	height: 50.9rem;
-	width: 100%;
 	background: #FAFAFA;
 }
 
@@ -41,9 +41,9 @@ body {
 }
 
 .app-rules {
-	height: 20.32rem;
 	background: #FAFAFA;
 	margin-bottom: 4.8rem;
+	padding-bottom: 2rem;
 }
 
 .app-heading {
@@ -53,6 +53,7 @@ body {
 	font-size: 2rem;
 	line-height: 2.3rem;
 	color: #323238;
+	padding-top: 2rem;
 }
 
 .setting {
@@ -72,6 +73,11 @@ body {
 	background: #FFFFFF;
 	border-radius: 6px;
 	margin-top: 3rem;
+}
+
+.setting-icon {
+	height: 4.05rem;
+	width: 3.17rem;
 }
 
 .setting-title {
