@@ -1,33 +1,31 @@
-<div class="header flex flex-wrap place-items-center">
-    <header class="h-full relative mx-auto">
-        <!-- navbar -->
-        <nav class="flex justify-evenly nav-bg text-white w-screen h-full">
-            <div class="px-5 xl:px-12 ml-10 flex w-full items-center">
-                <a class="text-3xl font-bold font-heading" href="#">
-                    <!-- <img class="h-9" src="logo.png" alt="logo"> -->
-                    <span class="logo">Me</span>
-					<span class="sub-logo">Volve</span>
-                </a>
-            </div>
+<header class="header">
+	<!-- navbar -->
+	<nav class="flex justify-between text-white h-full">
+		<div class="flex items-center">
+			<a class="text-3xl font-bold font-heading" href="#">
+				<!-- <img class="h-9" src="logo.png" alt="logo"> -->
+				<span class="logo">Me</span>
+				<span class="sub-logo">Volve</span>
+			</a>
+		</div>
 
-            <!-- Nav Links -->
-            <div class="px-5 xl:px-12 flex w-full items-center">
-                <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-40">
-                    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-                    <li><a routerLink="features" routerLinkActive="active">Features</a></li>
-                    <li><a routerLink="pricing" routerLinkActive="active">Pricing</a></li>
-                    <li><a routerLink="contact-us" routerLinkActive="active">Contact Us</a></li>
-                </ul>
-            </div>
-			
-            <!-- Responsive navbar -->
-            <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </a>
-        </nav>
+		<!-- Nav Links -->
+		<div class="flex items-center">
+			<ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-20">
+				<li><a routerLink="/" routerLinkActive="active">Home</a></li>
+				<li><a routerLink="features" routerLinkActive="active">Features</a></li>
+				<li><a routerLink="pricing" routerLinkActive="active">Pricing</a></li>
+				<li><a routerLink="contact-us" routerLinkActive="active">Contact Us</a></li>
+			</ul>
+		</div>
+		
+		<!-- Responsive navbar -->
+		<a class="flex navbar-burger self-center md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none"
+				viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</a>
+	</nav>
 
-    </header>
-</div>
+</header>
