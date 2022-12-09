@@ -12,11 +12,13 @@ import { CarosuelComponent } from './carousel/carousel.component';
 import { DescriptionViewComponent } from './description-view/description-view.component';
 import { MaterialModule } from './material.module';
 import { CustomizeViewComponent } from './customize/customize.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,

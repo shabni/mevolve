@@ -1,20 +1,39 @@
-.font-semibold {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-}
+.header {
+	height: 7rem;
 
-.nav-bg {
-    background-color: var(--color-primary);
-}
+	.font-semibold {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+	}
+	
+	.nav-bg {
+		background-color: var(--color-primary);
+	}
+	
+	.logo {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+	
+	.sub-logo {
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+	
+	.active {
+		position: relative;
 
-.logo {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.sub-logo {
-    font-size: 2.5rem;
-    font-weight: 300;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -27px;
+			left: 0;
+			height: 5px;
+			border-radius: 2px;
+			background-color: #fff;
+			width: 100%;
+		}
+	}
 }

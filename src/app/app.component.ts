@@ -8,21 +8,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'mevolve';
-  slides = [
-    {
-      url: 'assets/images/img1.PNG'
-    }
-    ,
-    {
-      url: 'assets/images/img1.PNG'
-    }
-    ,
-    {
-      url: 'assets/images/img1.PNG'
-    },
-    {
-      url: 'assets/images/img1.PNG'
-    }
-  ]
-
 }
