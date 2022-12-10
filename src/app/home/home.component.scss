@@ -1,0 +1,68 @@
+.slides-container {
+	@media screen and (max-width: 850px) {
+		flex-direction: column;
+	}
+
+	.description {
+		width: 30%;
+
+		@media screen and (max-width: 1280px) {
+			width: 40%;
+		}
+
+		@media screen and (max-width: 1000px) {
+			width: 50%;
+		}
+
+		@media screen and (max-width: 850px) {
+			order: 2;
+			width: 100%;
+			padding-bottom: 4rem;
+		}
+	
+		p {
+			width: 70%;
+			font-size: 1.2rem;
+		}
+	
+		.app-btns-container {
+			width: 60%;
+	
+			.btn-app {
+				display: flex;
+				align-items: center;
+	
+				background-color: #000;
+				color: #fff;
+				padding: 6px 1rem;
+				font-size: 1.4rem;
+				line-height: 1;
+		
+				.btn-text {
+					font-size: .7rem;
+					margin-bottom: 2px;
+					text-align: left;
+				}
+			}
+	
+			.playstore-img {
+				width: 2rem;
+			}
+		}
+	}
+	
+	.btn-watch {
+		background-color: var(--color-primary);
+		color: #fff;
+		padding: .8rem 7rem;
+	}
+
+	.carousel-img-container {
+		@media screen and (max-width: 850px) {
+			display: flex;
+			justify-content: center;
+
+			margin-bottom: 4rem;
+		}
+	}
+}

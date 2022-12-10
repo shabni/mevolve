@@ -9,18 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 	slides = [
 		{
-		  url: 'assets/images/img1.PNG'
-		}
-		,
-		{
-		  url: 'assets/images/img1.PNG'
-		}
-		,
-		{
-		  url: 'assets/images/img1.PNG'
-		},
-		{
-		  url: 'assets/images/img1.PNG'
+		  url: '/assets/images/carousel-image.png'
 		}
 	]
 

@@ -3,6 +3,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
 /* You can add global styles to this file, and also import other style files */
 * {
 	margin: 0;
@@ -39,46 +44,3 @@ body {
 	text-align: center;
 	color: #9E9E9E;
 }
-
-.app-rules {
-	height: 20.32rem;
-	background: #FAFAFA;
-	margin-bottom: 4.8rem;
-}
-
-.app-heading {
-	display: flex;
-	justify-content: center;
-	font-weight: 600;
-	font-size: 2rem;
-	line-height: 2.3rem;
-	color: #323238;
-}
-
-.setting {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
-
-.setting-box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-	gap: 2rem;
-	height: 10.19rem;
-	width: 13rem;
-	background: #FFFFFF;
-	border-radius: 6px;
-	margin-top: 3rem;
-}
-
-.setting-title {
-	font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    color: #323238;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

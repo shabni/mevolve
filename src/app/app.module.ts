@@ -12,6 +12,7 @@ import { CarosuelComponent } from './carousel/carousel.component';
 import { DescriptionViewComponent } from './description-view/description-view.component';
 import { CustomizeViewComponent } from './customize/customize.component';
 import { HomeComponent } from './home/home.component';
+import { RulesComponent } from './app-rules/rules.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     PricingComponent,
     CarosuelComponent,
     DescriptionViewComponent,
-    CustomizeViewComponent
+    CustomizeViewComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,

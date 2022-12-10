@@ -8,19 +8,19 @@
 	[thumbnailTemplateRef]="thumbnail">
 </carosuel>
 
-<div class="app-rules">
-	<h3 class="app-heading">One App To Rule Them All</h3>
+<div class="app-rules py-8">
+	<h3 class="app-heading mb-12 mt-4">One App To Rule Them All</h3>
 	
 	<div class="setting">
 		<div class="setting-box">
 			<div class="setting-icon">
-				<img src="assets/images/ic1.png" alt="">
+				<img src="assets/images/ic1.png" alt="To do">
 			</div>
 			<div class="setting-title">To-Do List</div>
 		</div>
 		<div class="setting-box">
 			<div class="setting-icon">
-				<img src="assets/images/ic2.png" alt="">
+				<img src="assets/images/ic2.png" alt="Habit Tracker">
 			</div>
 			<div class="setting-title">Habit Tracker</div>
 		</div>
@@ -80,23 +80,52 @@
 <app-contact-us></app-contact-us>
 
 <ng-template #slide let-slide>
-<div [ngStyle]="{
-	'background-size': 'cover',
-	'background-image': 'url(' + slide.url + ')',
-	'background-repeat': 'no-repeat',
-	'width': '100%',
-	'height': '100%'
-}">
-</div>
+	<div class="slides-container flex justify-evenly">
+		<div class="description text-center flex flex-col items-center justify-center">
+			<h1 class="font-medium leading-tight text-5xl mt-0 text-600">Automate self-development</h1>
+
+			<p class="my-8">Evolve daily by efficiently managing your time, thoughts, tasks and routines in a simple app.</p>
+
+			<button class="btn-watch rounded mb-8">
+				<i class="fas fa-play mr-6"></i> 
+				Watch Video
+			</button>
+
+			<div class="app-btns-container flex justify-center">
+				<button class="btn-app mr-4 rounded">
+					<img class="mr-2" src="/assets/images/app-store.png" alt="App Store">
+
+					<div class="flex flex-col">
+						<span class="btn-text">Download on the</span>
+						<span>App Store</span>
+					</div>
+				</button>
+
+				<button class="btn-app rounded">
+					<img class="mr-2 playstore-img" src="/assets/images/playstore.webp" alt="Play Store">
+
+					<div class="flex flex-col">
+						<span class="btn-text uppercase text-4">Get it on</span>
+						<span>Google Play</span>
+					</div>
+				</button>
+			</div>
+		</div>
+
+		<div class="carousel-img-container">
+			<img [src]="slide.url" alt="Carousel Image">
+		</div>
+	</div>
 </ng-template>
 
 <ng-template #thumbnail let-slide>
 	<div [ngStyle]="{
-	'background-size': 'cover',
-	'background-image': 'url(' + slide.url + ')',
-	'background-repeat': 'no-repeat',
-	'background-position': 'center center',
-	'width': '100%',
-	'height': '100%'
-	}"></div>
-	</ng-template>
+		'background-size': 'cover',
+		'background-image': 'url(' + slide.url + ')',
+		'background-repeat': 'no-repeat',
+		'background-position': 'center center',
+		'width': '100%',
+		'height': '100%'
+		}">
+	</div>
+</ng-template>
