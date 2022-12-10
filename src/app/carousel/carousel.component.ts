@@ -1,14 +1,12 @@
-import {  Component,
+import {
+  Component,
   Input,
-  OnDestroy,
   TemplateRef,
-  ChangeDetectionStrategy,
-  OnInit,
   ChangeDetectorRef,
   KeyValueDiffer,
-  KeyValueDiffers} from '@angular/core';
+  KeyValueDiffers
+} from '@angular/core';
 
-import { FormControl } from '@angular/forms';
 import {
   trigger,
   state,
@@ -59,107 +57,104 @@ export interface ActiveSlides {
 
 export class CarosuelComponent {
 
-  @Input()
-  slides;
-  @Input()
-  isNavigationVisible = false;
-  @Input()
-  isThumbnailsVisible = false;
-  @Input()
-  animation: any = Animation.Fade;
-  @Input()
-  autoPlayDuration = 0;
-  @Input()
-  slideTemplateRef: TemplateRef<any>;
-  @Input()
-  thumbnailTemplateRef: TemplateRef<any>;
-  currentInterval;
-  differ: KeyValueDiffer<ActiveSlides, any>;
+  @Input() slides;
+  @Input() isNavigationVisible = false;
+  @Input() isThumbnailsVisible = false;
+  @Input() animation: any = Animation.Fade;
+  @Input() autoPlayDuration = 0;
+  @Input() slideTemplateRef: TemplateRef < any > ;
+  @Input() thumbnailTemplateRef: TemplateRef < any >; 
+  
+  currentInterval; 
+  differ: KeyValueDiffer < ActiveSlides, any > ;
 
   private _direction: Direction = Direction.Next;
+
   get direction() {
     return this._direction;
   }
+
   set direction(direction: Direction) {
     this._direction = direction;
   }
 
   private _activeSlides: ActiveSlides;
+
   get activeSlides() {
     return this._activeSlides;
   }
+
   set activeSlides(activeSlides: ActiveSlides) {
     this._activeSlides = activeSlides;
   }
 
-  constructor(private cd: ChangeDetectorRef, private differs: KeyValueDiffers) { }
+  constructor(private cd: ChangeDetectorRef, private differs: KeyValueDiffers) {}
 
-  ngOnInit(): void {
+	ngOnInit(): void {
+		if (this.slides) {
+			this.activeSlides = this.getPreviousCurrentNextIndexes(0);
+			this.differ = this.differs.find(this.activeSlides).create();
+			
+			if (this.slides.length > 1 && this.autoPlayDuration > 0) {
+				this.startTimer();
+			}
+		}
+	}
 
-    if (this.slides) {
-      this.activeSlides = this.getPreviousCurrentNextIndexes(0);
-      this.differ = this.differs.find(this.activeSlides).create();
-      if (this.slides.length > 1 && this.autoPlayDuration > 0) {
-        this.startTimer();
-      }
-    }
-  }
+	ngOnDestroy(): void {
+		this.resetTimer();
+		this.cd.detach();
+	}
 
-  ngOnDestroy(): void {
-    this.resetTimer();
-    this.cd.detach();
-  }
+	select(index: number): void {
+		this.resetTimer();
+		this.activeSlides = this.getPreviousCurrentNextIndexes(index);
+		this.direction = this.getDirection(this.activeSlides.current, index);
+		this.startTimer();
 
-  select(index: number): void {
-    this.resetTimer();
-    this.activeSlides = this.getPreviousCurrentNextIndexes(index);
-    this.direction = this.getDirection(this.activeSlides.current, index);
-    this.startTimer();
+		if (this.differ.diff(this.activeSlides)) {
+			this.cd.detectChanges();
+		}
+	}
 
-    if (this.differ.diff(this.activeSlides)) {
-      this.cd.detectChanges();
-    }
-  }
+	getDirection(oldIndex: number, newIndex: number): Direction {
+		const images = this.slides;
 
-  getDirection(oldIndex: number, newIndex: number): Direction {
-    const images = this.slides;
+		if (oldIndex === images.length - 1 && newIndex === 0) {
+			return Direction.Next;
+		} 
+		else if (oldIndex === 0 && newIndex === images.length - 1) {
+			return Direction.Prev;
+		}
 
-    if (oldIndex === images.length - 1 && newIndex === 0) {
-      return Direction.Next;
-    } else if (oldIndex === 0 && newIndex === images.length - 1) {
-      return Direction.Prev;
-    }
+		return oldIndex < newIndex ? Direction.Next : Direction.Prev;
+	}
 
-    return oldIndex < newIndex ? Direction.Next : Direction.Prev;
-  }
+	getPreviousCurrentNextIndexes(index: number): ActiveSlides {
+		const images = this.slides;
 
-  getPreviousCurrentNextIndexes(index: number): ActiveSlides {
-    const images = this.slides;
+		return {
+			previous: (index === 0 ? images.length - 1 : index - 1) % images.length,
+			current: index % images.length,
+			next: (index === images.length - 1 ? 0 : index + 1) % images.length
+		};
+	}
 
-    return {
-      previous: (index === 0 ? images.length - 1 : index - 1) % images.length,
-      current: index % images.length,
-      next: (index === images.length - 1 ? 0 : index + 1) % images.length
-    };
-  }
+	getAnimationSlideState(index: number) {
+		return index === this.activeSlides.current ? 'current' : index === this.activeSlides.next ? 'next' : index === this.activeSlides.previous ? 'previous' : ''
+	}
 
-  getAnimationSlideState(index: number) {
-    return index === this.activeSlides.current ? 'current' : index === this.activeSlides.next ? 'next' : index === this.activeSlides.previous ? 'previous' : ''
-  }
+	startTimer(): void {
+		this.resetTimer();
 
-  startTimer(): void {
-    this.resetTimer();
+		if (this.autoPlayDuration > 0) {
+			this.currentInterval = setInterval(() => this.select(this.activeSlides.next), this.autoPlayDuration);
+		}
+	}
 
-    if (this.autoPlayDuration > 0) {
-      this.currentInterval = setInterval(() => this.select(this.activeSlides.next), this.autoPlayDuration);
-    }
-  }
-
-  resetTimer(): void {
-    if (this.currentInterval) {
-      clearInterval(this.currentInterval);
-    }
-  }
-
-
+	resetTimer(): void {
+		if (this.currentInterval) {
+			clearInterval(this.currentInterval);
+		}
+	}
 }

@@ -10,7 +10,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { CarosuelComponent } from './carousel/carousel.component';
 import { DescriptionViewComponent } from './description-view/description-view.component';
-import { MaterialModule } from './material.module';
 import { CustomizeViewComponent } from './customize/customize.component';
 import { HomeComponent } from './home/home.component';
 
@@ -30,8 +29,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    MaterialModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

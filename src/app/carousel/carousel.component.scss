@@ -6,8 +6,6 @@
 
     .carousel {
       width: 100%;
-      height: 70vh;
-      min-height: var(--min-height-carousel);
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -20,14 +18,6 @@
         list-style: none;
         margin: var(--unit-1);
         height: 100%;
-        .slide {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
       }
 
       .thumbnails {
