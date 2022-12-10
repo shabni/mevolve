@@ -1,34 +1,29 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+
 
 @Component({
   selector: 'description-view',
   templateUrl: './description-view.component.html',
   styleUrls: ['./description-view.component.scss']
 })
-export class DescriptionViewComponent implements OnInit, OnChanges {
+export class DescriptionViewComponent implements OnChanges {
+	@Input() imageDirection: 'left' | 'right' = 'left';
+	@Input() imageUrl: string;
+	@Input() marginTop = '10rem';
 
-  @Input() imageDirection :'left' |'right' ='left'
-  @Input() imageUrl: string
-  isChecked = true
+	isChecked = true
+	flexDirection: string = 'row';
 
-  flexDirection: string = 'row'
+	constructor() { }
 
-  constructor() { }
+	ngOnChanges(changes: SimpleChanges){
 
-  
-
-  ngOnChanges(changes: SimpleChanges){
-
-    if (this.imageDirection === 'left') {
-      this.flexDirection = 'row'
-    }  else {
-      this.flexDirection = 'row-reverse'
-    } 
-  }
-
-  ngOnInit(): void {
-
-    console.log("++--->>")
-  }
-
+		if (this.imageDirection === 'left') 
+		{
+			this.flexDirection = 'row'
+		}  
+		else {
+			this.flexDirection = 'row-reverse'
+		} 
+	}
 }

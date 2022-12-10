@@ -8,47 +8,16 @@
 	[thumbnailTemplateRef]="thumbnail">
 </carosuel>
 
-<div class="app-rules py-8">
-	<h3 class="app-heading mb-12 mt-4">One App To Rule Them All</h3>
-	
-	<div class="setting">
-		<div class="setting-box">
-			<div class="setting-icon">
-				<img src="assets/images/ic1.png" alt="To do">
-			</div>
-			<div class="setting-title">To-Do List</div>
-		</div>
-		<div class="setting-box">
-			<div class="setting-icon">
-				<img src="assets/images/ic2.png" alt="Habit Tracker">
-			</div>
-			<div class="setting-title">Habit Tracker</div>
-		</div>
-		<div class="setting-box">
-			<div class="setting-icon">
-				<img src="assets/images/ic3.png" alt="">
-			</div>
-			<div class="setting-title">Journaling</div>
-		</div>
-		<div class="setting-box">
-			<div class="setting-icon"><img src="assets/images/ic4.png" alt=""></div>
-			<div class="setting-title">Notes</div>
-		</div>
-		<div class="setting-box">
-			<div class="setting-icon"><img src="assets/images/ic5.png" alt=""></div>
-			<div class="setting-title">Lists</div>
-		</div>
-	</div>
-</div>
+<app-rules></app-rules>
 
 <description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mobile1.png'"></description-view>
 <description-view [imageDirection]="'right'" [imageUrl]="'assets/images/mobile2.png'"></description-view>
-<description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mob3.PNG'"></description-view>
+<description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mob3.PNG'" [marginTop]="'0'"></description-view>
 
-<customize-view [imageDirection]="'left'" [imageUrl]="'assets/images/passcode.png'"></customize-view>
-<customize-view [imageDirection]="'right'" [imageUrl]="'assets/images/calender.png'"></customize-view>
+<!-- <customize-view [imageDirection]="'left'" [imageUrl]="'assets/images/passcode.png'"></customize-view>
+<customize-view [imageDirection]="'right'" [imageUrl]="'assets/images/calender.png'"></customize-view> -->
 
-<div class="video-section">
+<!-- <div class="video-section">
 	<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
 		<div class="relative mb-6 sm:mx-auto md:mb-10 md:max-w-md lg:max-w-lg">
 			<img class="object-cover w-full h-56 rounded shadow-lg md:h-64 lg:h-80 mt-40"
@@ -77,7 +46,7 @@
 
 <app-pricing></app-pricing>
 
-<app-contact-us></app-contact-us>
+<app-contact-us></app-contact-us> -->
 
 <ng-template #slide let-slide>
 	<div class="slides-container flex justify-evenly">

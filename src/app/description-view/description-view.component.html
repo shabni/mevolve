@@ -1,32 +1,34 @@
 <div class="container" [style.flex-direction]="flexDirection">
     <div class="img-section">
-        
-        <img [src]="imageUrl" style="width: 100%; height:100%" />
+        <img [src]="imageUrl" class="w-full h-full" />
     </div>
-    <div class="description-section">
-        <div class="title">Customize the way you like</div>
-        <div class="feature">
-            <div class="toggle">
-                <mat-slide-toggle></mat-slide-toggle>
-                <span >Trun Off-on features</span>
-            </div>
-            <mat-icon>expand_more</mat-icon>
+
+    <div class="description-section" [style.marginTop]="marginTop">
+		<h2 class="text-4xl font-extrabold dark:text-white mb-12">Customize the way you like</h2>
+
+        <div class="feature card mb-12">
+			<label class="inline-flex relative items-center cursor-pointer">
+				<input type="checkbox" value="" class="sr-only peer">
+				<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[6px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+				<span class="ml-3 font-medium">Turn Off-On the features</span>
+			</label>
+
+			<div class="info">Mevolve was developed to help you reach your goal and be more consistent</div>
         </div>
-        <div class="info">Mevolve was developed to help you reach your goal and be more consistent</div>
-        <div class="mode">
-            <mat-icon>wb_sunny</mat-icon>
+		
+        <div class="mode card mb-12">
+            <img src="/assets/images/light.png" alt="mode">
+
             <div class="mode-desc">
                 <span>Light and Dark Mode</span>
-                <mat-icon>expand_more</mat-icon>
-
             </div>
         </div>
 
-        <div class="mode">
-            <mat-icon>palette</mat-icon>
+        <div class="mode card">
+            <img src="/assets/images/theme.png" alt="theme">
+
             <div class="mode-desc">
-                <span>Multi theme color</span>
-                <mat-icon>expand_more</mat-icon>
+                <span>Multi theme colors</span>
             </div>
         </div>
     </div>
