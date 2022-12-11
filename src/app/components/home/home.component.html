@@ -8,14 +8,16 @@
 	[thumbnailTemplateRef]="thumbnail">
 </carosuel>
 
-<!-- <app-rules></app-rules>
+<app-rules></app-rules>
 
-<description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mobile1.png'"></description-view>
-<description-view [imageDirection]="'right'" [imageUrl]="'assets/images/mobile2.png'"></description-view>
-<description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mob3.PNG'" [marginTop]="'0'"></description-view>
+<section class="features" id="features">
+	<description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mobile1.png'"></description-view>
+	<description-view [imageDirection]="'right'" [imageUrl]="'assets/images/mobile2.png'"></description-view>
+	<description-view [imageDirection]="'left'" [imageUrl]="'assets/images/mob3.PNG'" [marginTop]="'0'"></description-view>
 
-<customize-view [imageDirection]="'left'" [imageUrl]="'assets/images/passcode.png'" ></customize-view>
-<customize-view [imageDirection]="'right'" [imageUrl]="'assets/images/calender.png'"></customize-view>
+	<customize-view [imageDirection]="'left'" [imageUrl]="'assets/images/passcode.png'" ></customize-view>
+	<customize-view [imageDirection]="'right'" [imageUrl]="'assets/images/calender.png'"></customize-view>
+</section>
 
 <section class="video-section">
 	<div class="video-container">
@@ -27,9 +29,9 @@
 	</p>
 </section>
 
-<app-pricing></app-pricing> -->
+<app-pricing id="pricing"></app-pricing>
 
-<app-contact-us></app-contact-us>
+<app-contact-us id="contactUs"></app-contact-us>
 
 <ng-template #slide let-slide>
 	<div class="slides-container flex justify-evenly">
@@ -39,7 +41,7 @@
 			<p class="my-8">Evolve daily by efficiently managing your time, thoughts, tasks and routines in a simple app.</p>
 
 			<button class="btn-watch rounded mb-8">
-				<i class="fas fa-play mr-6"></i> 
+				<i class="fas fa-play mr-6"></i>
 				Watch Video
 			</button>
 

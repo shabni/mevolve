@@ -9,7 +9,7 @@ import { PricePlan } from 'src/app/models/models';
 })
 export class PricingComponent {
 	pricing: PricePlan[] = [];
-	offers: string[] = [];
+	offers: any[] = [];
 	
 	constructor() {
 		this.pricing = [
@@ -19,13 +19,13 @@ export class PricingComponent {
 		];
 
 		this.offers = [
-			"Add Todos, Habits, Journals and Notes in a single app.",
-			"Four types of Habit Tracking.",
-			"Track Todos, Habits, Journals and Notes with daily values.",
-			"Update your Mood and Pictures in Journal and Notes section.",
-			"Customize the app color.",
-			"Notification and Reminders.",
-			"Lock Pin"
+			{ title: 'Add Todos, Habits, Journals and Notes in a single app.', image: '/assets/images/add.png' },
+			{ title: 'Four types of Habit Tracking.', image: '/assets/images/track.png' },
+			{ title: 'Track Todos, Habits, Journals and Notes with daily values.', image: '/assets/images/bar.png' },
+			{ title: 'Update your Mood and Pictures in Journal and Notes section.', image: '/assets/images/emoji.png' },
+			{ title: 'Customize the app color.', image: '/assets/images/mind.png' },
+			{ title: 'Notification and Reminders.', image: '/assets/images/bell.png' },
+			{ title: 'Lock Pin.', image: '/assets/images/lock.png' }
 		];
 	}
 }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -32,6 +33,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+	ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

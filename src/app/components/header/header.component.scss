@@ -13,6 +13,10 @@
 		font-size: 1.4rem;
 		line-height: 1.6rem;
 	}
+
+	li {
+		cursor: pointer;
+	}
 	
 	.logo {
 		font-size: 3rem;
@@ -22,6 +26,32 @@
 	.sub-logo {
 		font-size: 2.5rem;
 		font-weight: 300;
+	}
+
+	.mobile-nav {
+		display: none;
+		flex-direction: column;
+		background-color: var(--color-primary);
+		color: #fff;
+
+		position: absolute;
+		top: 6.9rem;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+
+		@media screen and (max-width: 767px) {
+			display: flex;
+		}
+
+		ul {
+			li {
+				padding: 1.6rem 0;
+				&:not(:last-child) {
+					border-bottom: 1px solid #fff;
+				}
+			}
+		}
 	}
 	
 	.active {
