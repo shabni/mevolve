@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppRule } from '../models/models';
+import { AppRule } from '../../models/models';
 
 
 @Component({

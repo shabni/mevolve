@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PricePlan } from '../models/models';
+import { PricePlan } from 'src/app/models/models';
 
 
 @Component({
