@@ -25,7 +25,23 @@
 			h2 {
 				text-align: center;
 			}
-		} 
+		}
+
+		@media screen and (max-width: 960px) {
+			width: 50%;
+		}
+
+		@media screen and (max-width: 800px) {
+			width: 65%;
+		}
+
+		@media screen and (max-width: 700px) {
+			width: 80%;
+		}
+
+		@media screen and (max-width: 500px) {
+			width: 90%;
+		}
 
 		.card {
 			box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.02), -4px -4px 40px rgba(0, 0, 0, 0.02);
@@ -38,6 +54,8 @@
         }
 
         .info {
+			margin-top: 1rem;
+    		line-height: 1.4;
             margin-left: 4rem;
             color: #9E9E9E;
             width: 30rem;
@@ -49,9 +67,7 @@
 
         .mode {
             display: flex;
-            justify-content: flex-start;
-            gap: 25px;
-            align-items: center;
+			flex-direction: column;
 			color: #323238;
 			background-color: #fff;
 

@@ -7,29 +7,73 @@
 		<h2 class="text-4xl font-extrabold dark:text-white mb-12">Customize the way you like</h2>
 
         <div class="feature card mb-12">
-			<label class="inline-flex relative items-center cursor-pointer">
-				<input type="checkbox" value="" class="sr-only peer">
-				<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[6px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-				<span class="ml-3 font-medium">Turn Off-On the features</span>
-			</label>
-
-			<div class="info">Mevolve was developed to help you reach your goal and be more consistent</div>
+			<div class="flex justify-between">
+				<label class="inline-flex relative items-center cursor-pointer">
+					<input type="checkbox" value="" class="sr-only peer">
+					<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[6px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+					<span class="ml-3 font-medium">Turn Off-On the features</span>
+				</label>
+	
+				<span (click)="onToggle('feature1')">
+					<svg *ngIf="getAccordionState(['feature1'])" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+					</svg>
+	
+					<svg *ngIf="!getAccordionState(['feature1'])" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+					</svg>
+				</span>  
+			</div>
+			  
+			<div class="info" *ngIf="!getAccordionState(['feature1'])">Mevolve was developed to help you reach your goal and be more consistent</div>
         </div>
 		
         <div class="mode card mb-12">
-            <img src="/assets/images/light.png" alt="mode">
+			<div class="flex justify-between">
+				<div class="flex">
+					<img src="/assets/images/light.png" alt="mode" class="mr-6">
+	
+					<div class="mode-desc">
+						<span>Light and Dark Mode</span>
+					</div>
+				</div>
+	
+				<span (click)="onToggle('feature2')">
+					<svg *ngIf="getAccordionState(['feature2'])" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+					</svg>
+	
+					<svg *ngIf="!getAccordionState(['feature2'])" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+					</svg>
+				</span>  
+			</div>
 
-            <div class="mode-desc">
-                <span>Light and Dark Mode</span>
-            </div>
+			<div class="info" *ngIf="!getAccordionState(['feature2'])">Mevolve was developed to help you reach your goal and be more consistent</div>
         </div>
 
         <div class="mode card">
-            <img src="/assets/images/theme.png" alt="theme">
+			<div class="flex justify-between">
+				<div class="flex">
+					<img src="/assets/images/theme.png" alt="theme" class="mr-6">
 
-            <div class="mode-desc">
-                <span>Multi theme colors</span>
-            </div>
+					<div class="mode-desc">
+						<span>Multi theme colors</span>
+					</div>
+				</div>
+	
+				<span (click)="onToggle('feature3')">
+					<svg *ngIf="getAccordionState(['feature3'])" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+					</svg>
+	
+					<svg *ngIf="!getAccordionState(['feature3'])" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+					</svg>
+				</span>  
+			</div>
+
+			<div class="info" *ngIf="!getAccordionState(['feature3'])">Mevolve was developed to help you reach your goal and be more consistent</div>
         </div>
     </div>
 </section>

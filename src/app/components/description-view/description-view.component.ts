@@ -14,10 +14,15 @@ export class DescriptionViewComponent implements OnChanges {
 	isChecked = true
 	flexDirection: string = 'row';
 
+	accordions = {
+		feature1: false,
+		feature2: true,
+		feature3: true
+	}
+
 	constructor() { }
 
-	ngOnChanges(changes: SimpleChanges){
-
+	ngOnChanges(changes: SimpleChanges) {
 		if (this.imageDirection === 'left') 
 		{
 			this.flexDirection = 'row'
@@ -25,5 +30,15 @@ export class DescriptionViewComponent implements OnChanges {
 		else {
 			this.flexDirection = 'row-reverse'
 		} 
+	}
+
+	onToggle(type: string): void {
+		this.accordions[type] = !this.accordions[type];
+
+		console.log(this.accordions);
+	}
+
+	getAccordionState(type): boolean {
+		return this.accordions[type];
 	}
 }
