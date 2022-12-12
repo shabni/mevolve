@@ -11,6 +11,18 @@
 
 	.img-section {
 		width: 30rem;
+
+		@media screen and (max-width: 400px){
+			display: none;
+		}
+	}
+
+	.img-section-mob {
+		width: 30rem;
+
+		@media screen and (min-width: 400px){
+			display: none;
+		}
 	}
 
     .description-section {

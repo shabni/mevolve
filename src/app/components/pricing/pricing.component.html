@@ -27,9 +27,11 @@
     
 				<div type="list" *ngFor="let offer of offers"
 					class="inline-flex mb-6 relative items-center py-2 px-4 w-full text-sm font-medium listing list-para">
-                    <img class="mr-8" [src]="offer.image" [alt]="offer.title">
+                    <div class="icon-container">
+						<img [src]="offer.image" [alt]="offer.title">
+					</div>
 					
-					<div>{{ offer.title }}</div>
+					<div class="offer">{{ offer.title }}</div>
                 </div>
             </div>
         </div>

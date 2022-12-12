@@ -25,7 +25,13 @@
 				</span>  
 			</div>
 			  
-			<div class="info" *ngIf="!getAccordionState(['feature1'])">Mevolve was developed to help you reach your goal and be more consistent</div>
+			<div class="flex flex-col" *ngIf="!getAccordionState(['feature1'])">
+				<div class="info">Mevolve was developed to help you reach your goal and be more consistent</div>
+
+				<div class="img-section-mob">
+					<img [src]="imageUrl"/>
+				</div>
+			</div>
         </div>
 		
         <div class="mode card mb-12">

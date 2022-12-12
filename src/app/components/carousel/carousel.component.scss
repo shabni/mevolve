@@ -14,7 +14,11 @@
 		position: relative;
 
 		@media screen and (max-width: 850px) {
-			height: 115vh;
+			height: 112vh;
+		}
+
+		@media screen and (max-width: 400px) {
+			height: 107vh;
 		}
 
 		.slides {

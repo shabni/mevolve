@@ -70,6 +70,10 @@
 		background-color: var(--color-primary);
 		color: #fff;
 		padding: 1rem 8rem;
+		
+		@media screen and (max-width: 400px) {
+			padding: 1rem 7rem;
+		}
 
 		&:disabled {
 			opacity: .6;
