@@ -1,36 +1,33 @@
-<section class="section my-24 px-6 mx-auto">
-
-    <!-- Section: Design Block -->
-    <div class="mb-8 text-gray-800">
-		<h2 class="text-5xl font-extrabold dark:text-white mb-12 text-center">Choose the best plan for you</h2>
+<section class="section my-16 px-6 mx-auto">
+    <div class="mb-12 text-gray-800">
+		<h2 class="price-heading dark:text-white mb-12 text-center">Choose the best plan for you</h2>
 
         <div class="grid lg:grid-cols-12 pricing-card">
             <div class="mb-6 lg:mb-0 card" *ngFor="let priceCard of pricing">
                 <div class="block rounded-lg shadow bg-color ">
-                    <div class="p-10 text-center">
+                    <div class="py-6 text-center">
                         <h3 class="text-2xl mb-6">
                             <strong>${{ priceCard.price }}</strong>
                         </h3>
 
                         <p class="description text-sm"> {{ priceCard.type }} </p>
 
-                        <p class="sub-description mb-4 text-sm">({{ priceCard.duration }})</p>
+                        <p class="sub-description text-sm">({{ priceCard.duration }})</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
     <div class="mb-6 lg:mb-0 offer-card">
         <div class="block rounded-lg detailed-listing ">
-			<h2 class="text-5xl font-extrabold dark:text-white mb-12 text-center">What we offer</h2>
+			<h2 class="offer-heading dark:text-white mb-8 text-center">What we offer</h2>
 
             <div class="min-w-full mt-9 text-gray-900 bg-white dark:bg-gray-700 dark:text-white ">
     
 				<div type="list" *ngFor="let offer of offers"
 					class="inline-flex mb-6 relative items-center py-2 px-4 w-full text-sm font-medium listing list-para">
-                    <img class="mr-6" [src]="offer.image" [alt]="offer.title">
+                    <img class="mr-8" [src]="offer.image" [alt]="offer.title">
 					
 					<div>{{ offer.title }}</div>
                 </div>

@@ -5,7 +5,11 @@
 				<a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
 					<span class="logo">Me</span><span class="sub-logo">volve</span>
 				</a>
-				<span class="line"></span>	
+
+				<div class="logo-line flex items-center">
+					<span class="line"></span>
+					<span class="ml-2">evolve daily</span>
+				</div>
 			</div>
             <div class="mt-4 lg:max-w-sm">
                 <p class="footer-para">
@@ -13,6 +17,7 @@
                 </p>
             </div>
         </div>
+
         <div class="grid grid-cols-3 gap-3 row-gap-8 lg:col-span-4 md:grid-cols-3">
             <div>
                 <p class="font-semibold tracking-wide text-heading ">Sitemap</p>
@@ -69,7 +74,8 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-between pt-5 border-t sm:flex-row">
+
+    <div class="flex justify-between pt-5 footer-border sm:flex-row">
         <p class="text-sm footer-para">
             ©{{ currentDate | date: 'YYYY' }} All rights reserved
         </p>

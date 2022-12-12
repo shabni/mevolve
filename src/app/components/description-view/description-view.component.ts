@@ -25,10 +25,11 @@ export class DescriptionViewComponent implements OnChanges {
 	ngOnChanges(changes: SimpleChanges) {
 		if (this.imageDirection === 'left') 
 		{
-			this.flexDirection = 'row'
+			this.flexDirection = 'row';
 		}  
 		else {
-			this.flexDirection = 'row-reverse'
+			this.flexDirection = 'row-reverse';
+			this.marginTop = '7rem';
 		} 
 	}
 

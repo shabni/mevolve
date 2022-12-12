@@ -1,9 +1,10 @@
-<section class="section" [style.flex-direction]="flexDirection">
+<section class="section" [style.flex-direction]="flexDirection" [class.mt-first]="flexDirection === 'row'">
     <div class="img-section">
         <img [src]="imageUrl"/>
     </div>
 	
-    <div class="description-section">
+    <div class="description-section" 
+		[style.marginLeft]="flexDirection === 'row' ? '10rem' : '0'">
 		<h2 class="text-4xl font-extrabold dark:text-white mb-4">Customize the way you like</h2>
 
         <ul class="list">

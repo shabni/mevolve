@@ -16,7 +16,7 @@
     .description-section {
 		display: flex;
 		flex-direction: column;
-		font-size: 1.6rem;
+		font-size: 1.7rem;
 
 		@media screen and (max-width: 960px) {
 			margin-top: 0 !important;
@@ -58,7 +58,7 @@
     		line-height: 1.4;
             margin-left: 4rem;
             color: #9E9E9E;
-            width: 30rem;
+            width: 40rem;
 
 			@media screen and (max-width: 960px) {
 				width: calc(100% - 4rem);

@@ -15,7 +15,12 @@
 	.setting {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		gap: 6rem;
+		justify-content: center;
+
+		@media screen and (max-width: 400px) {
+			gap: 3rem;
+		}
 
 		.setting-box {
 			display: flex;
@@ -26,6 +31,7 @@
 			width: 13rem;
 			background: #FFFFFF;
 			border-radius: 6px;
+			width: 14rem;
 		}
 		
 		.setting-title {
